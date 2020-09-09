@@ -1,9 +1,9 @@
 import React from 'react'
 
-function PinnedNote() {
+function PinnedNote({data}) {
     return (
         <div>
-            Pinned Note
+            Pinned Note: {data}
             
         </div>
     )

@@ -5,7 +5,6 @@ import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
 import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 import EditIcon from '@material-ui/icons/Edit';
 import ArchiveIcon from '@material-ui/icons/Archive';
-import DeleteIcon from '@material-ui/icons/Delete';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
 
@@ -63,10 +62,7 @@ function LeftMenu() {
             icon: <ArchiveIcon/>,
             label: "Archive"
         },
-        {
-            icon: <DeleteIcon/>,
-            label: "Trash"
-        },
+        
         {
             icon: <DeleteOutlinedIcon/>,
             label: "Trash"

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function OthersNote() {
+function OthersNote({data}) {
     return (
         <div>
-            Others Note
+            Others Note: {data}
         </div>
     )
 }

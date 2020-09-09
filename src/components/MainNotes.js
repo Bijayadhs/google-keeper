@@ -4,13 +4,15 @@ import PinnedNote from './PinnedNote';
 import OthersNote from './OthersNote';
 
 function MainNotes() {
-    const [pinned, setPinned] = useState(false)
+    const [pinned, setPinned] = useState(false);
+    const [data, setData] = useState('');
+    
 
     return (
-        <div classname="flex flex-col items-center">
-            <TakeNote setPinned={setPinned}/>
+        <div className="mx-auto w-1/2 my-4 flex flex-col items-center">
+            <TakeNote setPinned={setPinned} data={data} setData={setData}/>
             <div>
-                {pinned?<PinnedNote/>:<OthersNote/>}
+                {pinned?<PinnedNote data={data}/>:<OthersNote data={data}/>}
             </div>
         </div>
     )
