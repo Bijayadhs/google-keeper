@@ -7,11 +7,11 @@ function MainNotes() {
     const [pinned, setPinned] = useState(false)
 
     return (
-        <div>
+        <div classname="flex flex-col items-center">
             <TakeNote setPinned={setPinned}/>
-            {pinned?<PinnedNote/>:<OthersNote/>}
-
-            
+            <div>
+                {pinned?<PinnedNote/>:<OthersNote/>}
+            </div>
         </div>
     )
 }

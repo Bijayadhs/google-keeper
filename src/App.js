@@ -6,9 +6,9 @@ import MainNotes from './components/MainNotes';
 
 function App() {
   return (
-    <div className="overflow-y-auto flex flex-col">
+    <div className="h-screen overflow-y-auto flex flex-col bg-gray-100">
         <Navbar />
-        <div className="flex">     
+        <div className="flex mt-12">     
           <LeftMenu />
           <MainNotes/>   
         </div>  
@@ -26,10 +26,7 @@ export default App;
 // import GridOnIcon from '@material-ui/icons/GridOn';
 // import AppsIcon from '@material-ui/icons/Apps';
 // import LabelIcon from '@material-ui/icons/Label';
-// import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
-// import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
-// import ArchiveIcon from '@material-ui/icons/Archive';
-// import DeleteIcon from '@material-ui/icons/Delete';
+
 // import ListIcon from '@material-ui/icons/List';
 // import ImageIcon from '@material-ui/icons/Image';
 // import LanguageIcon from '@material-ui/icons/Language';
