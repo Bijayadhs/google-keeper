@@ -16,7 +16,7 @@ import CloseIcon from '@material-ui/icons/Close';
 function Card({n}) {
     // const appState =  useContext(StateContext)
     return (
-        <div className="text-gray-700 w-full h-48 my-3 rounded-lg flex flex-col justify-between border border-purple-300 bg-purple-300 rounded-lg">
+        <div className={`text-gray-700 w-full h-48 my-3 rounded-lg flex flex-col justify-between border border-purple-300 bg-${n.color}-300 rounded-lg`}>
             <div className="top flex justify-between items-center">
                 {n.isSelect?<CheckCircleIcon/>:<CheckCircleOutlinedIcon />}
                 {n.isPinned?<RoomIcon />:<RoomOutlinedIcon/>}

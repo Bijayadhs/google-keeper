@@ -15,16 +15,36 @@ import HistoryIcon from '@material-ui/icons/History';
 import UpdateIcon from '@material-ui/icons/Update';
 import CloseIcon from '@material-ui/icons/Close';
 
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 
 function TakeNote({note,setNote}) {
     const [title,setTitle]=useState('')
     const [content,setContent]=useState('')
     const [pinned,setPinned]=useState(false)
     const [select,setSelect]=useState(false)
+    const [anchorEl, setAnchorEl] = useState(null);
+    const [color, setColor] = useState('pink')
+
+  const handleClick = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+
+  const handleColor = (color) => {
+    setColor(color)
+    setAnchorEl(null);
+  };
+  
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
        
    
 
-    function handleSubmit(e){
+    const handleSubmit=(e)=>{
         e.preventDefault();
         
         console.log(e.target.name)
@@ -37,7 +57,7 @@ function TakeNote({note,setNote}) {
             isPinned:pinned,
             isSelect:select,
             label:'',
-            color:'pink'
+            color:color
         }]))
         setContent('');
         setTitle('');
@@ -60,7 +80,22 @@ function TakeNote({note,setNote}) {
                 <div className="bottom w-full pb-2 flex justify-between items-center text-gray-700 font-bold">
                         <div className="space-x-2"><AddAlertIcon fontSize="small" />
                         <GroupAddIcon fontSize="small"/>
-                        <ColorLensIcon fontSize="small"/>
+                        
+                        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                        <ColorLensIcon fontSize="small"/></Button>
+                            <Menu
+                            id="simple-menu"
+                            anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                            >
+                            <MenuItem onClick={()=>handleColor('orange')}>Orange</MenuItem>
+                            <MenuItem onClick={()=>handleColor('red')}>Red</MenuItem>
+                            <MenuItem onClick={()=>handleColor('blue')}>Blue</MenuItem>
+                            <MenuItem onClick={()=>handleColor('purple')}>Purple</MenuItem>
+                            </Menu>
+                            
                         <MoreVertIcon fontSize="small"/>
                         <HistoryIcon fontSize="small"/>
                         <UpdateIcon fontSize="small"/>
