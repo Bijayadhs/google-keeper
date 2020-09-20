@@ -1,11 +1,14 @@
 import React from 'react';
 import Card from './Card';
 
-function OthersNote() {
+function OthersNote({note}) {
     return (
-        <div>
-            <h6 className="text-xs text-gray-700">OTHERS</h6>
-           <Card/>
+        <div className="">
+           <h6 className="text-xs text-gray-700" >OTHERS</h6>
+            {note.map(n=>(
+            !n.isPinned && <Card key={n.id} n={n}/>))}
+           
+            
         </div>
     )
 }

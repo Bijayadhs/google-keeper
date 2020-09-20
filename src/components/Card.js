@@ -1,6 +1,7 @@
 import React from 'react';
 // import StateContext from '../context/stateContext';
 import CheckCircleOutlinedIcon from '@material-ui/icons/CheckCircleOutlined';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import RoomOutlinedIcon from '@material-ui/icons/RoomOutlined';
 import RoomIcon from '@material-ui/icons/Room';
 import AddAlertIcon from '@material-ui/icons/AddAlert';
@@ -17,7 +18,7 @@ function Card({n}) {
     return (
         <div className="text-gray-700 w-full h-48 my-3 rounded-lg flex flex-col justify-between border border-purple-300 bg-purple-300 rounded-lg">
             <div className="top flex justify-between items-center">
-                <CheckCircleOutlinedIcon />
+                {n.isSelect?<CheckCircleIcon/>:<CheckCircleOutlinedIcon />}
                 {n.isPinned?<RoomIcon />:<RoomOutlinedIcon/>}
 
             </div>

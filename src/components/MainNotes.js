@@ -1,20 +1,11 @@
 import React,{useState} from 'react';
 import TakeNote from './TakeNote';
 import PinnedNote from './PinnedNote';
-// import OthersNote from './OthersNote';
+import OthersNote from './OthersNote';
 // import StateContext from '../context/stateContext'
 
 function MainNotes() {
-    const initialNote=[
-        {
-            id: Date.now(),
-            content:'My First note',
-            isPinned:true,
-            isSelect: true,
-            label:'react',
-            color:'orange'
-        }
-]
+    const initialNote=[]
     const [note, setNote] = useState(initialNote)
     console.log(note)
 
@@ -26,8 +17,7 @@ function MainNotes() {
                 <TakeNote note={note} setNote={setNote} />
                 <div className="w-full">
                     <PinnedNote note={note} />
-                    {/* <PinnedNote note={note} /> */}
-                    {/* <OthersNote note={note} /> */}
+                    <OthersNote note={note} />
                 </div>
             </div>
     // </StateContext.Provider>
