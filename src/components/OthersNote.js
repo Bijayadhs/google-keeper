@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Card from './Card';
 
-function OthersNote({data}) {
+function OthersNote() {
     return (
         <div>
-            Others Note: {data}
+            <h6 className="text-xs text-gray-700">OTHERS</h6>
+           <Card/>
         </div>
     )
 }

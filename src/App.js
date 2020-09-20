@@ -4,16 +4,19 @@ import Navbar from './components/Navbar';
 import LeftMenu from './components/LeftMenu';
 import MainNotes from './components/MainNotes';
 
+
 function App() {
   return (
-    <div className="h-screen overflow-y-auto flex flex-col bg-gray-100">
-        <Navbar />
-        <div className="flex mt-12">     
-          <LeftMenu />
-          <MainNotes/>   
-        </div>  
+    
+      <div className="h-screen overflow-hidden flex flex-col bg-gray-100">
+          <Navbar />
+          <div className="flex mt-12">     
+            <LeftMenu />
+            <MainNotes/>   
+          </div>  
 
-    </div>
+      </div>
+      
   );
 }
 

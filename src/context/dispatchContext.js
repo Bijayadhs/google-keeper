@@ -1,5 +1,5 @@
 import {createContext} from 'react';
 
-const dispatchContext = createContext();
+const DispatchContext = createContext();
 
-export default dispatchContext;
+export default DispatchContext;
