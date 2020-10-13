@@ -69,7 +69,7 @@ function LeftMenu() {
         }
     ]
     return (
-        <div className="w-64 h-screen py-8 -mt-8  overflow-y-scroll ">
+        <div className="row-start-2 col-start-1 col-span-1 h-screen py-16  overflow-y-scroll ">
             {labels.map(l=>(
                <div key={l.label}> <Label icon={l.icon} label={l.label}/></div>
             ))}

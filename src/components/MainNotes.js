@@ -13,7 +13,7 @@ function MainNotes() {
 
     return (
     // <StateContext.Provider value={{card: state.card, dispatch}}>
-            <div className="h-screen overflow-y-scroll w-full px-48  py-4 flex flex-col  items-end">
+            <div className="row-start-2  col-start-2 col-span-4 h-screen overflow-y-scroll px-48  py-16 flex flex-col  items-end">
                 <TakeNote note={note} setNote={setNote} />
                 <div className="w-full py-4">
                     <PinnedNote note={note} />
